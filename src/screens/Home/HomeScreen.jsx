@@ -50,7 +50,6 @@ function HomeScreen({ navigation }) { // nhận navigation từ props
                         <Sliceimage/>
              </View>
             </ScrollView>
-           
                 <View  style={style.FooterContainer}>
                         <Footer navigation={navigation}/>
                </View>
@@ -87,7 +86,7 @@ const style = StyleSheet.create({
                 justifyContent:'center',
                 alignItems:'center',
                 height:40,
-                paddingBottom:30
+                paddingBottom:55
                
       },
      

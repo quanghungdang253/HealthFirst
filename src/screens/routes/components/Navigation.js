@@ -6,7 +6,9 @@ import { TextInput } from 'react-native';
 import HomeScreen from '../../Home/HomeScreen';
 
 import Main_Body from '../../Home/components/Home_Body/Main_Body';
-import Check_index from '../../Home/components/Home_Body/components/Tabchoose/components/Check_index';
+import Check_index from '../../Home/components/Home_Body/components/Tabchoose/components/checkIndex';
+import menuChoose from '../../Home/components/Home_Body/components/Tabchoose/components/menuChoose/components/menuChoose';
+import bmiCheck from '../../Home/components/Home_Body/components/Tabchoose/components/bmiCheck';
 
         const Pages = [
             {
@@ -28,7 +30,7 @@ import Check_index from '../../Home/components/Home_Body/components/Tabchoose/co
         {
             id: 2,
             name: "Check_index",
-            component: Check_index, 
+            component: menuChoose, 
             options:{
             title: "Checkindex",
             headerStyle:{
@@ -36,7 +38,19 @@ import Check_index from '../../Home/components/Home_Body/components/Tabchoose/co
                  },
                
                     } 
-             }
+             },
+             {
+                id: 3,
+                name: "Check-Bmi",
+                component: Check_index, 
+                options:{
+                title: "Checkindex",
+                headerStyle:{
+                    backgroundColor:'orange'
+                     },
+                   
+                        } 
+                 }
     
             
         ]

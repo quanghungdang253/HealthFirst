@@ -9,12 +9,9 @@ function Main_Body({navigation}) {
                     {/* <Tabchoose/> */}
                     <TouchableOpacity
                                 onPress={navigation.navigate("Tinhtoan")}
-
                     > 
                                 Chuyển trang 
                      </TouchableOpacity>
-                   
-                    
             </View>
     );
 }

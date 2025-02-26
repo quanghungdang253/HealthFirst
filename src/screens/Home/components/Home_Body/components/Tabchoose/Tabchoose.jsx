@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { View } from 'react-native';
 import { StyleSheet } from 'react-native';
 import { TouchableOpacity, Button,Text, Image } from 'react-native';
-import Check_index from './components/Check_index';
+import Check_index from './components/checkIndex';
 import { FontAwesome } from '@expo/vector-icons';
 
 
@@ -11,6 +11,7 @@ function Tabchoose(props) {
       
         const [customs, setCustoms] = useState(false);
     return (
+        
             <View  style={styled.container}>
                 <View style={styled.container__tabchoose}>
                    
@@ -20,16 +21,15 @@ function Tabchoose(props) {
                       
                       >
                         <Image
-                                source={require('./image/BMI_new.webp')}
-                                        style={[styled.iconBmi, styled.icon]}
-                                />
-                                <Text style={styled.text_tabchoose}> Kiểm tra chi số </Text>
+                          source={require('./image/bmiNew.jpg')}
+                          style={[styled.iconBmi, styled.icon]}
+                        />
+                                <Text style={styled.text_tabchoose}>  </Text>
                      </TouchableOpacity>
                      <TouchableOpacity
                       style={[styled.Button, styled.Buttoncheck]}
-                      onPress={() => navigation.navigate("Check_index")}
-                      
-                      >
+                      onPress={() => navigation.navigate("Check_index")}>
+                                         
                                 <FontAwesome name='search' style={[styled.iconsearch, styled.icon]}/>
                                 <Text style={styled.text_tabchoose}> Tìm kiếm  </Text>
                      </TouchableOpacity>
@@ -49,11 +49,9 @@ function Tabchoose(props) {
                       onPress={() => navigation.navigate("Check_index")}
                       
                       >
-                                <Image
-                                        source={require('./image/BMI_new.webp')}
-                                        style={[styled.iconBmi, styled.icon]}
-                                />
-                                <Text style={styled.text_tabchoose}> Tư vấn sức khỏe </Text>
+                              
+                                <FontAwesome name='book'  style={[styled.iconbook__health, styled.icon]} />
+                                <Text style={styled.text_tabchoose}> Cẩm nang sức khỏe </Text>
                      </TouchableOpacity>
                     
                 </View>  
@@ -69,8 +67,10 @@ const styled = StyleSheet.create({
                         fontSize: 12,
                         fontWeight: '600',
                         textAlign:'center',
-                        width: 80,
-                        
+                        width: 80,      
+        },
+        iconbook__health: {
+                        fontSize:30
         },
         Button: {
                 paddingTop: 15,
@@ -80,37 +80,35 @@ const styled = StyleSheet.create({
               
                 alignItems:'center',
                 justifyContent:'center',
-                backgroundColor: '#dfe6e9',
+                backgroundColor: 'white',
                
                 // width: 50,
                 height:80
                 
         },
-
-
-
         //==============================================================================
-                container: {
-                                        flex:1,
-                                        flexDirection: 'row',
+        container: {
+                flex:1,
+                flexDirection: 'row',
                                         justifyContent:'center',
                                         
                               
                                 
                 },
-                container__tabchoose: {
+        container__tabchoose: {
                         flex: 1,
                         flexDirection:'row',
                         justifyContent:'center',
                         alignItems:'center',
                         gap: 5,
-                          backgroundColor: "#00cec9",
-                          height:100,
+                        backgroundColor: "#00cec9",
+                        height:100,
                        
                 },
-                icon: {
-                                height: 30,
-                                width:30
+        icon: {
+                         height: 25,
+                         width:30,
+                        fontSize:25
                 },
                 iconsearch: {
                         fontSize: 25

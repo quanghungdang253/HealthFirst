@@ -20,7 +20,7 @@ function Route(props) {
     return (
      <> 
         <NavigationContainer>  
-            <Stack.Navigator             initialRouteName='Home'> 
+            <Stack.Navigator  initialRouteName='Home'> 
                 <Stack.Group>   
          {Pages.map((pages) => (
                         <Stack.Screen 
@@ -29,11 +29,7 @@ function Route(props) {
                             component={pages.component}
                             options={pages.options}
                         />
-
-
             ))}
-                        
-                  
                  </Stack.Group>
              </Stack.Navigator>        
         </NavigationContainer>  
